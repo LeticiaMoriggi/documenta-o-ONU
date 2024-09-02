@@ -9,9 +9,8 @@
     const nameOlt = document.querySelector("body > div.container-fluid > div.row > main > h2 > span:nth-child(2) > a").innerText;
     const slotOnu = document.querySelector("body > div.container-fluid > div.row > main > h2 > span:nth-child(3) > a").innerText;
     const idOnu = document.querySelector("body > div.container-fluid > div.row > main > h2 > span:nth-child(4)").innerText;
-    const modeloONU = document.querySelector("#onu-detail > table:nth-child(1) > tbody > tr:nth-child(2) > th").innerText;
+    const modeloONU = document.querySelector("#onu-detail > table:nth-child(1) > tbody > tr:nth-child(2) > td").innerText;
     const SA = document.querySelector("#onu-detail > table:nth-child(1) > tbody > tr:nth-child(6) > td > span:nth-child(2)").innerText;
-    const firmware = document.querySelector("#onu-detail > table:nth-child(1) > tbody > tr:nth-child(7) > td").innerText;
     let negociacao;
 
     let SR;
@@ -28,7 +27,7 @@
     }
 
 
-    dadosFormatados = `[LOCALIZAÇÃO]\n- Cliente está na ${nameOlt}\n- ONU está localizada em ${nameOnu} / slot: ${slotOnu} / onu id: ${idOnu}\n- Modelo da ONU: ${modeloONU}\n- SA: ${SA}\n- SR: ${SR}\n- Firmware: ${firmware}\n- ${negociacao}\n\n`;
+    dadosFormatados = `\nCliente está na ${nameOlt}\nONU está localizada em ${nameOnu} / slot: ${slotOnu} / onu id: ${idOnu}\nModelo ONU: ${modeloONU}\nSA: ${SA}\n${negociacao}\n\n`;
 
     if (url.includes('show-logs-onu')) {
         // Extrair dados dos alarmes
